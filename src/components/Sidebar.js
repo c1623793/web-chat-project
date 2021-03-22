@@ -1,20 +1,18 @@
 import React, { Component } from 'react';
 import '../css/App.css';
+import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 
-
 class Sidebar extends Component {
-
+    constructor(props) {
+        super(props);
+    }
     componentDidMount() {
-        // or simply just AOS.init();
         AOS.init({
-            // initialise with other settings
             duration: 2000
-        });
-    };
-
-    
+        })
+    }
     render() {
         return (
             <div className="site-wrap" id="home-section">
@@ -31,6 +29,6 @@ class Sidebar extends Component {
 
     }
 
-}
+};
 
 export default Sidebar;

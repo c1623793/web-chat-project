@@ -1,25 +1,27 @@
-import React from 'react';
+import React, { useEffect } from "react";
 import './css/App.css';
-import Body from './components/Body';
 import Sidebar from './components/Sidebar';
 import Navigation from './components/Navigation';
 import Greetings from './components/Greetings';
 import Projects from './components/Projects';
-import Form from './components/Form';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function App() {
 
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   return (
-    <div className="App">
-      <Body>
-        <Sidebar></Sidebar>
-        <Navigation></Navigation>
-        <Greetings>
-        </Greetings>
-        <Projects></Projects>
-        <Form></Form>
-      </Body>
-    </div>
+    <body className="body" data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+      <Sidebar></Sidebar>
+      <Navigation></Navigation>
+      <Greetings>
+      </Greetings>
+      <Projects></Projects>
+    </body>
 
   );
 }

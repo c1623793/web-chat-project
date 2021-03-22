@@ -1,25 +1,27 @@
 import React, { Component } from 'react';
 import '../css/App.css';
+import AOS from 'aos';
 import 'aos/dist/aos.css';
+import imageOne from '../assets/code_main.svg';
 
 class Greetings extends Component {
 
-    componentDidMount() {
-        // or simply just AOS.init();
+    constructor(props){
+        super(props);
+      }
+      componentDidMount(){
         AOS.init({
-            // initialise with other settings
-            duration: 2000
-        });
-    };
-
+          duration : 2000
+        })
+      }
 
     render() {
         return (
-            <div className="site-blocks-cover" style="overflow: hidden;">
+            <div className="site-blocks-cover" style={{ overflow: 'hidden' }}>
                 <div className="container">
                     <div className="row align-items-center justify-content-center">
-                        <div className="col-md-12" style="position: relative;" data-aos="fade-up" data-aos-delay="200">
-                            <img src="images/code_main.svg" alt="Image" className="img-fluid img-absolute" width="800px"></img>
+                        <div className="col-md-12" style={{ position: 'relative' }} data-aos="fade-up" data-aos-delay="200">
+                            <img src={imageOne} alt="Image" className="img-fluid img-absolute" width="800px"></img>
                             <div className="row mb-4" data-aos="fade-up" data-aos-delay="200">
                                 <div className="col-lg-6 mr-auto">
                                     <h1>Hi, I'm Laurate </h1>
@@ -34,5 +36,6 @@ class Greetings extends Component {
         )
     }
 
-}
+};
+
 export default Greetings;

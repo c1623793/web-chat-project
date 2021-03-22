@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
 import '../css/App.css';
+import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 
 class Navigation extends Component {
-    
-    componentDidMount() {
-        // or simply just AOS.init();
+
+    constructor(props){
+        super(props);
+      }
+      componentDidMount(){
         AOS.init({
-            // initialise with other settings
-            duration: 2000
-        });
-    };
+          duration : 2000
+        })
+      }
 
     render() {
         return (
@@ -42,5 +44,6 @@ class Navigation extends Component {
             </header>
         )
     }
-}
+};
+
 export default Navigation;

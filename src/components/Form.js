@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
+import AOS from 'aos';
 import 'aos/dist/aos.css';
 import '../css/App.css';
 
 class Form extends Component {
 
-    componentDidMount() {
-        // or simply just AOS.init();
+    constructor(props){
+        super(props);
+      }
+      componentDidMount(){
         AOS.init({
-            // initialise with other settings
-            duration: 2000
-        });
-    };
-
+          duration : 2000
+        })
+      }
     render() {
         return (
             <div className="site-section bg-image2 overlay" id="contact-section" data-aos="fade-up">
@@ -54,5 +55,6 @@ class Form extends Component {
             </div>
         )
     }
-}
+};
+
 export default Form;
