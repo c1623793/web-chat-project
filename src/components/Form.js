@@ -8,7 +8,7 @@ class Form extends Component {
                     <div className="row mb-5">
                         <div className="col-12 text-center">
                             <h2 className="section-title mb-3 text-white">Get In Touch</h2>
-                            <p className="text-white">Do you have a questio?</p>
+                            <p className="text-white">Do you have a question?</p>
                         </div>
                     </div>
                     <div className="row justify-content-center">
