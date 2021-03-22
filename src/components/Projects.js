@@ -1,6 +1,18 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import '../css/App.css';
+import 'aos/dist/aos.css';
+
 
  class Projects extends Component {
+    componentDidMount() {
+        // or simply just AOS.init();
+        AOS.init({
+            // initialise with other settings
+            duration: 2000
+        });
+    };
+
+
     render() {
         return (
             <div className="skills-section" id="projects-section">
@@ -66,5 +78,7 @@ import React, { Component } from 'react'
             </div>
         )
     }
+
+    
 }
 export default Projects;

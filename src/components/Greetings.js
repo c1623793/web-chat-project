@@ -1,6 +1,18 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import '../css/App.css';
+import 'aos/dist/aos.css';
 
 class Greetings extends Component {
+
+    componentDidMount() {
+        // or simply just AOS.init();
+        AOS.init({
+            // initialise with other settings
+            duration: 2000
+        });
+    };
+
+
     render() {
         return (
             <div className="site-blocks-cover" style="overflow: hidden;">
